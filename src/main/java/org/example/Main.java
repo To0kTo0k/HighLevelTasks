@@ -2,16 +2,15 @@ package org.example;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class Main {
     public static void main(String[] args) {
-        ApplicationContext annotationContext = new AnnotationConfigApplicationContext(BeanConfig.class);
-        MisterBean annotationBean = annotationContext.getBean(MisterBean.class);
-        System.out.println(annotationBean.getSpeech());
-
-        ApplicationContext xmlContext = new ClassPathXmlApplicationContext("xmlBeanConfig.xml");
-        MisterBean xmlBean = xmlContext.getBean(MisterBean.class);
-        System.out.println(xmlBean.getSpeech());
+        ApplicationContext context = new AnnotationConfigApplicationContext(BeanConfig.class);
+        MisterBean helloBean = (MisterBean) context.getBean("Hello");
+        System.out.println(helloBean.getSpeech());
+        MisterBean hiBean = (MisterBean) context.getBean("Hi");
+        System.out.println(hiBean.getSpeech());
+        MisterBean byeBean = (MisterBean) context.getBean("Bye");
+        System.out.println(byeBean.getSpeech());
     }
 }
