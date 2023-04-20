@@ -6,11 +6,13 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 public class Main {
     public static void main(String[] args) {
         ApplicationContext context = new AnnotationConfigApplicationContext(BeanConfig.class);
-        MisterBean helloBean = (MisterBean) context.getBean("Hello");
-        System.out.println(helloBean.getSpeech());
-        MisterBean hiBean = (MisterBean) context.getBean("Hi");
-        System.out.println(hiBean.getSpeech());
-        MisterBean byeBean = (MisterBean) context.getBean("Bye");
-        System.out.println(byeBean.getSpeech());
+        MisterBean misterBean = (MisterBean) context.getBean("misterBean");
+        misterBean.setSpeech("Hello");
+        System.out.println(misterBean);
+        MissBean missBean = context.getBean(MissBean.class, "Hi");
+        System.out.println(missBean);
+        MisterBean xmlBean = (MisterBean) context.getBean("xmlbean");
+        xmlBean.setSpeech("Hehe");
+        System.out.println(xmlBean);
     }
 }

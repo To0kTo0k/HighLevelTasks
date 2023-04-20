@@ -1,22 +1,12 @@
 package org.example;
 
-import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.ImportResource;
 
 @Configuration
+@ComponentScan("org.example")
+@ImportResource("classpath:xmlBean.xml")
 public class BeanConfig {
-    @Bean("Hello")
-    public MisterBean sayHello() {
-        return new MisterBean("Hello");
-    }
 
-    @Bean("Hi")
-    public MisterBean sayHi() {
-        return new MisterBean("Hi");
-    }
-
-    @Bean("Bye")
-    public MisterBean sayBye() {
-        return new MisterBean("Bye");
-    }
 }
