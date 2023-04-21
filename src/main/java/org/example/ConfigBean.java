@@ -1,11 +1,11 @@
 package org.example;
 
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.ImportResource;
 
+@ImportResource("classpath:xmlBean.xml")
 @Configuration
-@ComponentScan("org.example")
 public class ConfigBean {
     @Bean
     public MisterBean hiBean() {
