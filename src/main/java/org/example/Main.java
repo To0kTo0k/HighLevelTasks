@@ -12,13 +12,13 @@ public class Main {
         MisterBean misterBean = context.getBean("misterBean", MisterBean.class);
         System.out.println(misterBean);
 
-        MisterBean xmlBean = context.getBean("xmlBean", MisterBean.class);
+        OldBean xmlBean = context.getBean("xmlBean", OldBean.class);
         System.out.println(xmlBean);
 
-        MisterBean hiBean = context.getBean("hiBean", MisterBean.class);
+        MissBean hiBean = context.getBean("hiBean", MissBean.class);
         System.out.println(hiBean);
 
-        MisterBean byeBean = context.getBean("byeBean", MisterBean.class);
+        MissBean byeBean = context.getBean("byeBean", MissBean.class);
         System.out.println(byeBean);
     }
 }

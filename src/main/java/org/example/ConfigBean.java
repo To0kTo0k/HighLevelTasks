@@ -8,16 +8,12 @@ import org.springframework.context.annotation.ImportResource;
 @Configuration
 public class ConfigBean {
     @Bean
-    public MisterBean hiBean() {
-        MisterBean misterBean = new MisterBean();
-        misterBean.setSpeech("Hi");
-        return misterBean;
+    public MissBean hiBean() {
+        return new MissBean("Hi");
     }
 
     @Bean
-    public MisterBean byeBean() {
-        MisterBean misterBean = new MisterBean();
-        misterBean.setSpeech("Bye");
-        return misterBean;
+    public MissBean byeBean() {
+        return new MissBean("Bye");
     }
 }
