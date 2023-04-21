@@ -5,12 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6a6c6b27-e74f-4fac-9507-1db1b702d952" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/MissBean.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/xmlBean.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/BeanConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/BeanConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/BeanConfig.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/MisterBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/MisterBean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/MissBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/MissBean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/MisterBeanTest.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,11 +118,23 @@
       <workItem from="1681816431473" duration="2835000" />
       <workItem from="1681822134982" duration="4940000" />
       <workItem from="1681827976101" duration="405000" />
-      <workItem from="1681901556966" duration="11607000" />
+      <workItem from="1681901556966" duration="11917000" />
+      <workItem from="1682070432675" duration="5050000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

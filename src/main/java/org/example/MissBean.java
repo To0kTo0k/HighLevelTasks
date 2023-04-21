@@ -9,12 +9,12 @@ import org.springframework.context.annotation.Configuration;
 public class MissBean {
     private String speech;
 
-    @Bean("Hi")
+    @Bean(name = "Hi")
     public void sayHi() {
         this.speech = "Hi";
     }
 
-    @Bean
+    @Bean(name = "Bye")
     public void sayBye() {
         this.speech = "Bye";
     }
