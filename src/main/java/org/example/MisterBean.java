@@ -1,14 +1,18 @@
 package org.example;
 
 import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
 import org.springframework.stereotype.Component;
 
-@Data
 @AllArgsConstructor
-@NoArgsConstructor
+@Setter
+@ToString
 @Component
 public class MisterBean {
     private String speech;
+
+    public MisterBean() {
+        this.speech = "Hello";
+    }
 }

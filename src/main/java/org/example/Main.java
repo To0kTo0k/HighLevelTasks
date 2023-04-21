@@ -12,15 +12,15 @@ public class Main {
         ApplicationContext context = SpringApplication.run(Main.class);
 
         MisterBean misterBean = context.getBean("misterBean", MisterBean.class);
-        misterBean.setSpeech("Hello");
         System.out.println(misterBean);
 
-        MisterBean xmlBean = context.getBean("xmlbean", MisterBean.class);
-        xmlBean.setSpeech("Hehe");
+        MisterBean xmlBean = context.getBean("xmlBean", MisterBean.class);
         System.out.println(xmlBean);
 
-        MissBean missBean = context.getBean("missBean", MissBean.class);
-        missBean.sayHi();
-        System.out.println(missBean);
+        MisterBean hiBean = context.getBean("hiBean", MisterBean.class);
+        System.out.println(hiBean);
+
+        MisterBean byeBean = context.getBean("byeBean", MisterBean.class);
+        System.out.println(byeBean);
     }
 }
