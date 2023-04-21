@@ -1,21 +1,21 @@
 package org.example;
 
 import lombok.Data;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 @Data
-@Configuration
+@Component
 public class MissBean {
-    private String speech;
+    @Autowired
+    private MisterBean misterBean;
 
-    @Bean(name = "Hi")
     public void sayHi() {
-        this.speech = "Hi";
+        this.misterBean.setSpeech("Hi");
     }
 
-    @Bean(name = "Bye")
-    public void sayBye() {
-        this.speech = "Bye";
+    @Override
+    public String toString() {
+        return "MissBean(speech=" + this.misterBean.getSpeech() + ")";
     }
 }
