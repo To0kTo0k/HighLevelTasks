@@ -1,7 +1,6 @@
 package com.example.springmvcproject.controller;
 
 import com.example.springmvcproject.entities.MisterBean;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -16,10 +15,13 @@ import java.util.Objects;
 
 @Controller
 public class MisterBeanController {
+    private final ApplicationContext context;
 
-    @Autowired
-    private ApplicationContext context;
-    private MisterBean misterBean;
+    MisterBean misterBean;
+
+    public MisterBeanController(ApplicationContext context) {
+        this.context = context;
+    }
 
     @PostMapping("/misterbean")
     public ResponseEntity<MisterBean> createMisterBean() {
