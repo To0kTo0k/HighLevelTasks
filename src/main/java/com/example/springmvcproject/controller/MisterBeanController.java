@@ -1,6 +1,7 @@
 package com.example.springmvcproject.controller;
 
 import com.example.springmvcproject.entities.MisterBean;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -19,7 +20,7 @@ public class MisterBeanController {
 
     MisterBean misterBean;
 
-    public MisterBeanController(ApplicationContext context) {
+    public MisterBeanController(@Autowired ApplicationContext context) {
         this.context = context;
     }
 
