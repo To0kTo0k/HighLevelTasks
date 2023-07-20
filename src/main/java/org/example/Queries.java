@@ -10,7 +10,7 @@ import java.util.List;
 
 public class Queries {
 
-    public List<String> getPersonsFullNames(Connection connection) throws SQLException {
+    public List<String> getPersonsFullNames(Connection connection) {
         Statement statement = null;
         List<String> fullNames = null;
         try {
@@ -23,12 +23,17 @@ public class Queries {
         } catch (SQLException e) {
             System.out.println("Connection error");
         } finally {
-            statement.close();
+            try {
+                assert statement != null;
+                statement.close();
+            } catch (SQLException e) {
+                System.out.println("Statement close exception");
+            }
         }
         return fullNames;
     }
 
-    public List<String> getBanksNames(Connection connection) throws SQLException {
+    public List<String> getBanksNames(Connection connection) {
         Statement statement = null;
         List<String> names = null;
         try {
@@ -42,24 +47,38 @@ public class Queries {
         } catch (SQLException e) {
             System.out.println("Connection error");
         } finally {
-            statement.close();
+            try {
+                assert statement != null;
+                statement.close();
+            } catch (SQLException e) {
+                System.out.println("Statement close exception");
+            }
         }
         return names;
     }
 
-    public void setBanksNames(Connection connection, String bankName) throws SQLException {
-        PreparedStatement statement = null;
-        connection.setAutoCommit(false);
+    public void setBanksNames(Connection connection, String bankName) {
         try {
-            statement = connection.prepareStatement("UPDATE bank SET name = ?");
+            connection.setAutoCommit(false);
+        } catch (SQLException e) {
+            System.out.println("Autocommit off exception");
+        }
+        try (PreparedStatement statement = connection.prepareStatement("UPDATE bank SET name = ?")) {
             statement.setString(1, bankName);
             statement.executeUpdate();
         } catch (SQLException e) {
-            connection.rollback();
+            try {
+                connection.rollback();
+            } catch (SQLException ee) {
+                System.out.println("Connection rollback exception");
+            }
             System.out.println("Connection error");
         } finally {
-            connection.setAutoCommit(true);
-            statement.close();
+            try {
+                connection.setAutoCommit(true);
+            } catch (SQLException e) {
+                System.out.println("Autocommit on exception");
+            }
         }
     }
 }
